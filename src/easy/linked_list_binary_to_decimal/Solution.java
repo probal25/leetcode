@@ -48,4 +48,16 @@ public class Solution {
         return Integer.parseInt(binaryBit.toString(), 2);
     }
 
+    // 0ms
+    public int getDecimalValueSingleIteration(ListNode head) {
+        ListNode currentNode = head;
+        int decimal = 0;
+        while(currentNode != null) {
+            decimal = decimal * 2;
+            decimal += currentNode.val;
+            currentNode = currentNode.next;
+        }
+        return decimal;
+    }
+
 }
